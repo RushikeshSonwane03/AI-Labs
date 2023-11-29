@@ -1,0 +1,138 @@
+Shri Vile Parle Kelavani Mandal's 
+INSTITUTE OF TECHNOLOGY
+DHULE (M.S.)
+DEPARMENT OF COMPUTER ENGINEERING
+
+Name: Rushikesh Jagdish Sonwane                  Roll No.:63
+
+Subject : Artificial Intelligence Lab           Subject Code : BTCOL707                               
+
+Class: Final Year Comp. Engg.                        Expt. No. : 06
+
+Title : Solve Robot (traversal) problem using means End Analysis.
+
+Problem Staement :
+
+
+Software Required :
+
+
+Theory :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Conclusion:
+	Solve Robot (traversal) problem using means End Analysis 
+
+   
+
+Prolog
+
+
+
+The traversal problem for a robot is one of the many challenges that can be solved using the Means-End Analysis (MEA), a popular approach in artificial intelligence. In this case, the robot must use all available tools or actions to go from its current position to a target place. We'll use a streamlined Prolog example to demonstrate the idea of MEA for a robot traversal problem.
+Assume you have a straightforward grid environment with movable robot that can move left, right, up, and down, and that its objective is to go to a predetermined spot. This is a sample of Prolog code that illustrates a fundamental MEA solution for this issue:
+
+% Define the initial state (robot's current position)
+initial_state(2, 2).  % Assuming the robot starts at position (2, 2).
+
+% Define the goal state (target location)
+goal_state(5, 5).     % Assuming the goal is to reach position (5, 5).
+
+% Define the means or actions (robot's movement commands)
+move(up, 0, -1).
+move(down, 0, 1).
+move(left, -1, 0).
+move(right, 1, 0).
+
+% Define the MEA algorithm
+mea(State, State, []).
+mea(CurrentState, GoalState, [Action | Actions]) :-
+    move(Action, DX, DY),
+    NewX is CurrentStateX + DX,
+    NewY is CurrentStateY + DY,
+    mea((NewX, NewY), GoalState, Actions).
+
+% Entry point to solve the traversal problem using MEA
+solve_traversal :-
+    initial_state(CurrentStateX, CurrentStateY),
+    goal_state(GoalStateX, GoalStateY),
+    mea((CurrentStateX, CurrentStateY), (GoalStateX, GoalStateY), Actions),
+    write('Solution Actions: '), nl,
+    print_actions(Actions).
+
+% Predicate to print the sequence of actions
+print_actions([]).
+print_actions([Action | Rest]) :-
+    write(Action), nl,
+    print_actions(Rest).
+
+% Start the solver
+:- solve_traversal.
+
+
+In this example, we specify the robot's starting point, destination, and possible moves. The MEA algorithm is implemented by the mea predicate. It computes a series of actions (movements) to accomplish the objective given the current state (the robot's position) and the goal state (the target location).
+
+The starting position, the desired state, and the possible moves can all be changed to fit your unique robot traversal scenario. This is a condensed example of how MEA can be used in Prolog to solve such an issue. The grid world may be more complicated and require consideration of extra constraints in real-life circumstances.
+
+
+
+This lab demonstrated the implementation of Means-End Analysis in Prolog to solve the robot traversal problem. The concise Prolog code showcases how MEA can be applied to a simple grid environment, providing a foundation for solving more complex traversal challenges in real-life scenarios.
+
+
