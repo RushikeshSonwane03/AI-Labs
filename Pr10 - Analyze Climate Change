@@ -1,0 +1,66 @@
+Shri Vile Parle Kelavani Mandal's INSTITUTE OF TECHNOLOGY DHULE (M.S.)
+DEPARMENT OF COMPUTER ENGINEERING
+Name: Rushikesh Jagdish Sonwane                  Roll No.:63
+Subject : Artificial Intelligence Lab           Subject Code : BTCOL707                               
+Class: Final Year Comp. Engg.                        Expt. No. : 10
+Title : To analyze climate data and make predictions for weather forecasting and climate modeling
+
+
+	To analyze climate data and make predictions for weather forecasting and climate modeling   
+
+
+Prolog
+
+
+
+Climate Data Analysis and Prediction
+Climate data analysis involves processing large datasets containing information about various climate parameters such as temperature, humidity, wind speed, and precipitation. AI techniques, including Machine Learning (ML) and Deep Learning (DL), can be applied to analyze historical data, identify patterns, and create predictive models. These models can then be used for weather forecasting and climate modeling.
+
+Experiment Steps:
+1.	Data Collection: Obtain historical climate data from reliable sources or APIs.
+2.	Data Preprocessing: Clean and preprocess the data, handle missing values, and format it for model training.
+3.	Feature Selection: Identify relevant features for prediction, considering parameters like temperature, humidity, and wind speed.
+4.	Model Selection: Choose appropriate AI models for climate prediction (e.g., Neural Networks, LSTM, or regression models).
+5.	Training the Model: Train the selected model using historical climate data.
+6.	Model Evaluation: Evaluate the model's performance using validation data and metrics like Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE).
+7.	Prediction: Use the trained model to make predictions for future weather conditions.
+8.	Visualization: Visualize the predicted results and compare them with actual data to assess the model's accuracy.
+
+
+% Prolog Code for Weather Prediction
+
+% Example Facts (Replace with actual climate data)
+temperature(today, 25).
+temperature(yesterday, 22).
+humidity(today, 60).
+humidity(yesterday, 55).
+% ... (more climate-related facts)
+
+% Rules for Weather Prediction (Modify based on your climate model)
+predict(weather, today) :-
+    temperature(today, Temp),
+    humidity(today, Humidity),
+    
+    % Rule 1: If temperature is high and humidity is high, predict "Hot and Humid"
+    Temp > 30, Humidity > 70,
+    write('Weather Prediction: Hot and Humid'), nl.
+
+predict(weather, today) :-
+    temperature(today, Temp),
+    humidity(today, Humidity),
+    
+    % Rule 2: If temperature is moderate and humidity is moderate, predict "Mild"
+    Temp >= 20, Temp =< 30, Humidity >= 40, Humidity =< 70,
+    write('Weather Prediction: Mild'), nl.
+
+predict(weather, today) :-
+    % Rule 3: Default prediction if no specific rules apply
+    write('Weather Prediction: Not enough data for a specific prediction.'), nl.
+
+% Example Usage
+:- predict(weather, today).
+
+
+This experiment provides hands-on experience in applying AI techniques to climate data analysis and prediction. Understanding how to preprocess data, select features, choose suitable models, and evaluate predictions is crucial for developing effective weather forecasting and climate modeling systems. The integration of AI in climate science contributes to more accurate and efficient predictions, aiding in better decision-making for various applications.
+
+
