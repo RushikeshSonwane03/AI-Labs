@@ -1,0 +1,77 @@
+Shri Vile Parle Kelavani Mandal's INSTITUTE OF TECHNOLOGY DHULE (M.S.)
+DEPARMENT OF COMPUTER ENGINEERING
+Name: Rushikesh Jagdish Sonwane                  Roll No.:63
+Subject : Artificial Intelligence Lab           Subject Code : BTCOL707                               
+Class: Final Year Comp. Engg.                        Expt. No. : 08
+Title : Drug discovery: Identifying potential drug candidates through Al-based simulations
+
+
+	Drug discovery: Identifying potential drug candidates through Al-based simulations.
+
+   
+
+Prolog
+
+
+
+Drug Discovery through AI-Based Simulations
+Drug discovery involves the identification of potential drug candidates that can effectively treat a specific disease. AI-based simulations leverage machine learning algorithms and computational methods to analyze chemical structures and predict their biological activities. This accelerates the drug discovery process by narrowing down the potential candidates for further experimental validation.
+
+Experiment Steps:
+1.	Data Collection: Gather a dataset of chemical compounds with known biological activities.
+2.	Data Preprocessing: Clean and preprocess the dataset to remove noise and irrelevant information.
+3.	Feature Extraction: Extract relevant features from the chemical structures to represent them in a machine-readable format.
+4.	Model Training: Train a machine learning model using the preprocessed data to learn the relationship between chemical features and biological activities.
+5.	Prediction: Use the trained model to predict the biological activities of new chemical compounds.
+6.	Candidate Selection: Identify potential drug candidates based on their predicted activities and prioritize them for further experimental validation.
+
+% Prolog Code for Drug Discovery through AI-Based Simulations
+
+% Example Facts (Replace with your actual data)
+compound(activity, features).
+compound(activity, features).
+% ... (more compounds)
+
+% Data Preprocessing (Modify as needed)
+preprocess_data :-
+    % Implement data cleaning and preprocessing steps here
+    % Remove noise, handle missing values, etc.
+
+% Feature Extraction (Modify as needed)
+extract_features(Compound, Features) :-
+    % Implement feature extraction based on compound structure
+    % Convert chemical structures into machine-readable features
+
+% Model Training (Replace with your actual machine learning model)
+train_model :-
+    % Implement model training using machine learning techniques
+    % Use the preprocessed data and extracted features
+
+% Prediction (Replace with your actual prediction logic)
+predict_activity(Compound, PredictedActivity) :-
+    % Use the trained model to predict the biological activity
+    % Return the predicted activity for the given compound
+
+% Candidate Selection (Modify as needed)
+select_candidates :-
+    % Implement logic to identify potential drug candidates
+    % Prioritize compounds based on predicted activities
+
+% Main Execution
+drug_discovery :-
+    preprocess_data,
+    train_model,
+    % Example: Predict activity for a compound
+    predict_activity(compound1, PredictedActivity),
+    write('Predicted Activity for compound1: '), write(PredictedActivity), nl,
+    % Implement further steps such as candidate selection
+    select_candidates.
+
+% Example Usage
+:- drug_discovery.
+
+
+
+
+This experiment explores the integration of Artificial Intelligence into the drug discovery process. By leveraging AI-based simulations, researchers can efficiently identify potential drug candidates, saving time and resources in the early stages of drug development. The application of machine learning in drug discovery continues to revolutionize the pharmaceutical industry.
+
